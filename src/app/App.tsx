@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>Journal.</h1>
+        <h1>jrnl.</h1>
         <div className="header__buttons">
           <button
             onClick={() => {

@@ -1,0 +1,17 @@
+.List {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.List__item {
+  border-bottom: solid 1px;
+  margin: 10px 0 0;
+  height: 1.2em;
+  overflow: hidden;
+  transition: height 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.List__item.m-expand {
+  height: 100px;
+}

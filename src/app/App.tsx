@@ -1,10 +1,9 @@
-"use client";
 import useLocalStorageState from "use-local-storage-state";
-import "./App.css";
 import { List } from "./components/List";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
 import { Form } from "./components/Form";
+import "./App.css";
 
 export type Entry = {
   id: string;
@@ -13,12 +12,13 @@ export type Entry = {
   content: string;
 };
 
-export default function Home() {
+function App() {
   const [entries, setEntries] = useLocalStorageState("entries", {
     defaultValue: [],
   });
 
   const [showForm, setShowForm] = useState(false);
+
   return (
     <div className="app">
       <header>
@@ -49,3 +49,7 @@ export default function Home() {
     </div>
   );
 }
+
+export default App;
+
+// how to toggle the showForm variable.

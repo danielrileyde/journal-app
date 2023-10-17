@@ -1,0 +1,20 @@
+:root {
+  --black: #121212;
+  --white: #fff;
+}
+
+:root.m-dark {
+  --black: #fff;
+  --white: #121212;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+/* Yellow {
+#f2ba1b
+}
+*/

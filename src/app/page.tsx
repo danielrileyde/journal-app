@@ -5,6 +5,7 @@ import { List } from "./components/List";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
 import { Form } from "./components/Form";
+import { Session } from "next-auth";
 
 export type Entry = {
   id: string;
@@ -13,7 +14,8 @@ export type Entry = {
   content: string;
 };
 
-export default function Home() {
+export default function Home({ session }: { session: Session }) {
+  console.log("Session: ", session);
   const [entries, setEntries] = useLocalStorageState("entries", {
     defaultValue: [],
   });
@@ -22,7 +24,7 @@ export default function Home() {
   return (
     <div className="app">
       <header>
-        <h1>Journal.</h1>
+        <h1>jrnl.</h1>
         <div className="header__buttons">
           <button
             onClick={() => {

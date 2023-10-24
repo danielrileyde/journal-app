@@ -27,7 +27,7 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 1px;
-  margin: 20px;
+  margin: 0 30px;
 }
 
 h1 {
@@ -75,4 +75,5 @@ form {
   margin: auto;
   background-color: rgb(240, 240, 240);
   border: solid 0.5px;
+  border-radius: 30px;
 }

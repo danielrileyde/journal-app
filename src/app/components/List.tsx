@@ -10,7 +10,12 @@ export const List = ({ items }: ListProps) => {
   return (
     <ul className="List">
       {items.map((item) => {
-        return <ListItem item={item} />;
+        return (
+          <ListItem
+            key={(item.content, item.date, item.id, item.title)}
+            item={item}
+          />
+        );
       })}
     </ul>
   );

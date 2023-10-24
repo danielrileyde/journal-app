@@ -26,12 +26,12 @@ export const Form = ({ onSubmit }: FormProps) => {
   };
   return (
     <form onSubmit={(event) => handleSubmit(event)}>
-      <h3>Add New Entry</h3>
+      <h3>Create a jrnl entry</h3>
       <label htmlFor="title">Title</label>
-      <input name="title" id="title"></input>
+      <input required name="title" id="title"></input>
       <label htmlFor="content">Content</label>
-      <input id="content"></input>
-      <button className="submit__button">Submit</button>
+      <textarea required id="content" rows="12" cols="66"></textarea>
+      <button className="submit__button">Create Entry</button>
     </form>
   );
 };

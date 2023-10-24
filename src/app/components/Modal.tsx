@@ -13,7 +13,7 @@ export const Modal = ({ children, onClose }: ModalProps) => {
         className="modal__inner"
         onClick={(event) => event.stopPropagation()}
       >
-        <button onClick={onClose}>Close</button> {children}
+        <button onClick={onClose}>Cancel</button> {children}
       </div>
     </div>
   );

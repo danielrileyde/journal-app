@@ -17,17 +17,18 @@ if (process.env.NODE_ENV === "development") {
     client = new MongoClient(uri, options);
     global._mongoClientPromise = client.connect();
   }
-  clientPromise = global._mongoCleintPromise;
+  clientPromise = global._mongoClientPromise;
 } else {
   //In production mode, it's best to not use a gobal varibale.
   client = new MongoClient(uri, options);
   clientPromise = client.connect();
 }
 
-const connectedClient = await clientPromise;
-const db = connectedClient.db("Cluster0");
+// const connectedClient = await clientPromise;
+// const db = connectedClient.db("Cluster0");
 
 // Export a module-scoped MongoClient promise. By doing this in a
 // seperate module, the client can be shared accross functions.
 
-export default db;
+// export default db;
+export default clientPromise;

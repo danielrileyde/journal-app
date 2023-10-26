@@ -6,6 +6,8 @@ import { Modal } from "./components/Modal";
 import { useState } from "react";
 import { Form } from "./components/Form";
 import { Session } from "next-auth";
+import { signIn, signOut, useSession } from "next-auth/react";
+import useSWR from "swr";
 
 export type Entry = {
   id: string;
@@ -15,10 +17,16 @@ export type Entry = {
 };
 
 export default function Home({ session }: { session: Session }) {
+  const { status } = useSession();
   console.log("Session: ", session);
   const [entries, setEntries] = useLocalStorageState("entries", {
     defaultValue: [],
   });
+
+  const { data } = useSWR("/api/home");
+  console.log("data", data);
+
+  const isLoggedIn = status === "authenticated";
 
   const [showForm, setShowForm] = useState(false);
   return (
@@ -40,9 +48,21 @@ export default function Home({ session }: { session: Session }) {
           >
             Add Entry
           </button>
+          <button
+            onClick={() => {
+              signOut();
+            }}
+          >
+            Sign Out
+          </button>
         </div>
       </header>
-      <List items={entries} />
+      {isLoggedIn ? (
+        <List items={entries} />
+      ) : (
+        <button onClick={() => signIn()}>log in</button>
+      )}
+
       {showForm && (
         <Modal onClose={() => setShowForm(false)}>
           <Form onSubmit={() => setShowForm(false)} />

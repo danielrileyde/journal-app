@@ -1,6 +1,7 @@
 "use client";
 import { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
+import { SWRConfig } from "swr";
 
 export default function RootLayout({
   children,
@@ -10,10 +11,22 @@ export default function RootLayout({
   session: Session;
 }) {
   return (
-    <SessionProvider session={session}>
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-    </SessionProvider>
+    <SWRConfig
+      value={{
+        fetcher: async (...args) => {
+          const response = await fetch(...args);
+          if (!response.ok) {
+            throw new Error(`Request with ${JSON.stringify(args)} failed.`);
+          }
+          return await response.json();
+        },
+      }}
+    >
+      <SessionProvider session={session}>
+        <html lang="en">
+          <body>{children}</body>
+        </html>
+      </SessionProvider>
+    </SWRConfig>
   );
 }

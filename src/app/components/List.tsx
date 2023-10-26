@@ -1,4 +1,4 @@
-import { Entry } from "../App";
+import { Entry } from "../page";
 import "../styles/List.css";
 import { ListItem } from "./ListItem";
 

@@ -18,7 +18,7 @@ export const Form = ({ onSubmit }: FormProps) => {
     const newEntry = {
       // id: uid(),
       // date: new Date(),
-      name: "PETE",
+      // name: "Daniel",
       title: event.target.elements.title.value,
       content: event.target.elements.content.value,
     };

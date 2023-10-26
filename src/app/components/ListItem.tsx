@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Entry } from "../App";
+import { Entry } from "../page";
 
 interface ListItemProps {
   item: Entry;

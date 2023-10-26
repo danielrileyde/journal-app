@@ -19,7 +19,7 @@ export type Entry = {
 export default function Home({ session }: { session: Session }) {
   const { status } = useSession();
   console.log("Session: ", session);
-  const [entries, setEntries] = useLocalStorageState("entries", {
+  const [entries] = useLocalStorageState("entries", {
     defaultValue: [],
   });
 

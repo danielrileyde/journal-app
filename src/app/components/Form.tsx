@@ -34,7 +34,13 @@ export const Form = ({ onSubmit, mutate }: FormProps) => {
         <label htmlFor="title">Title</label>
         <input required name="title" id="title"></input>
         <label htmlFor="content">Content</label>
-        <textarea required id="content" rows={15} cols={70}></textarea>
+        <textarea
+          required
+          id="content"
+          rows={15}
+          cols={70}
+          maxLength={2500}
+        ></textarea>
         <button className="submit__button">Create Entry</button>
       </form>
     </>

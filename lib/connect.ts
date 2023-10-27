@@ -7,10 +7,11 @@ if (!MONGODB_URI) {
     "Please define the MONGODB_URI environment variable inside .env.local"
   );
 }
-
+//@ts-ignore
 var cached = global.mongoose;
 
 if (!cached) {
+  //@ts-ignore
   cached = global.mongoose = { conn: null, promise: null };
 }
 
@@ -22,6 +23,7 @@ async function dbConnect() {
     const opts = {
       bufferCommands: false,
     };
+    //@ts-ignore
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
       return mongoose;
     });

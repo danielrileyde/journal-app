@@ -4,7 +4,7 @@ import { List } from "./components/List";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
 import { Form } from "./components/Form";
-import { Session } from "next-auth";
+
 import { signIn, signOut, useSession } from "next-auth/react";
 import useSWR from "swr";
 
@@ -15,7 +15,7 @@ export type Entry = {
   content: string;
 };
 
-export default function Home({ session }: { session: Session }) {
+export default function Home() {
   const { status } = useSession();
   // console.log("Session: ", session);
 

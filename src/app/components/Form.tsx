@@ -1,10 +1,12 @@
 import { FormEvent } from "react";
+import useSWR from "swr";
 
 interface FormProps {
   onSubmit: () => void;
 }
 
 export const Form = ({ onSubmit }: FormProps) => {
+  const { mutate } = useSWR("/api/home");
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Step 1; Capture user inputs
@@ -12,6 +14,7 @@ export const Form = ({ onSubmit }: FormProps) => {
     const newEntry = {
       title: event.target.elements.title.value,
       content: event.target.elements.content.value,
+      create_at: new Date(),
     };
     const response = await fetch("/api/home", {
       method: "POST",
@@ -20,6 +23,9 @@ export const Form = ({ onSubmit }: FormProps) => {
       },
       body: JSON.stringify(newEntry),
     });
+    if (response.ok) {
+      mutate();
+    }
   };
   return (
     <>

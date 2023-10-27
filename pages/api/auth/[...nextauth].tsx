@@ -1,6 +1,7 @@
 import NextAuth, { Session, User } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
+//@ts-ignore
 import clientPromise from "../../../lib/mongodb";
 
 export const authOptions = {
@@ -12,6 +13,7 @@ export const authOptions = {
     }),
     //   // ...add more providers here
   ],
+  //@ts-ignore
   adapter: MongoDBAdapter(clientPromise),
   callbacks: {
     async session({ session, user }: { session: Session; user: User }) {

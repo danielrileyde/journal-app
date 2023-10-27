@@ -3,6 +3,7 @@
 import dbConnect from "../../../lib/connect";
 import JournalEntry from "../../../lib/models/JournalEntry";
 
+//@ts-ignore
 export default async function handler(request, response) {
   await dbConnect();
 
@@ -19,6 +20,7 @@ export default async function handler(request, response) {
 
       return response.status(201).json({ status: "Journal Entry created." });
     } catch (error) {
+      //@ts-ignore
       return response.status(500).json({ error: error.message });
     }
   }

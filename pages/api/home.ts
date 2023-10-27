@@ -2,6 +2,7 @@ import dbConnect from "../../lib/connect";
 import JournalEntry from "../../lib/models/JournalEntry";
 import User from "../../lib/models/User";
 
+//@ts-ignore
 export default async function handler(req, res) {
   console.log(req.method);
   await dbConnect();

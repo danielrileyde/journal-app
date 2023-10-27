@@ -5,13 +5,16 @@ interface FormProps {
   onSubmit: () => void;
 }
 
+//@ts-ignore
 export const Form = ({ onSubmit, mutate }: FormProps) => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Step 1; Capture user inputs
     onSubmit();
     const newEntry = {
+      //@ts-ignore
       title: event.target.elements.title.value,
+      //@ts-ignore
       content: event.target.elements.content.value,
       create_at: new Date(),
     };

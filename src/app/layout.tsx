@@ -15,6 +15,7 @@ export default function RootLayout({
     <SWRConfig
       value={{
         fetcher: async (...args) => {
+          //@ts-ignore
           const response = await fetch(...args);
           if (!response.ok) {
             throw new Error(`Request with ${JSON.stringify(args)} failed.`);

@@ -24,7 +24,7 @@ export default function RootLayout({
     >
       <SessionProvider session={session}>
         <html lang="en">
-          <body>{children}</body>
+          <body suppressHydrationWarning={true}>{children}</body>
         </html>
       </SessionProvider>
     </SWRConfig>

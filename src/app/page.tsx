@@ -1,5 +1,5 @@
 "use client";
-import useLocalStorageState from "use-local-storage-state";
+// import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
 import { List } from "./components/List";
 import { Modal } from "./components/Modal";
@@ -19,9 +19,9 @@ export type Entry = {
 export default function Home({ session }: { session: Session }) {
   const { status } = useSession();
   console.log("Session: ", session);
-  const [entries] = useLocalStorageState("entries", {
-    defaultValue: [],
-  });
+  // const [entries] = useLocalStorageState("entries", {
+  //   defaultValue: [],
+  // });
 
   const { data } = useSWR("/api/home");
   console.log("data", data);
@@ -29,6 +29,8 @@ export default function Home({ session }: { session: Session }) {
   const isLoggedIn = status === "authenticated";
 
   const [showForm, setShowForm] = useState(false);
+  if (!data) return;
+
   return (
     <div className="app">
       <header>
@@ -42,6 +44,7 @@ export default function Home({ session }: { session: Session }) {
             Dark Theme
           </button>
           <button
+            className="header__butoons--add"
             onClick={() => {
               setShowForm(!showForm);
             }}
@@ -49,6 +52,7 @@ export default function Home({ session }: { session: Session }) {
             Add Entry
           </button>
           <button
+            className="header__butoons--signOut"
             onClick={() => {
               signOut();
             }}
@@ -58,7 +62,7 @@ export default function Home({ session }: { session: Session }) {
         </div>
       </header>
       {isLoggedIn ? (
-        <List items={entries} />
+        <List items={data} />
       ) : (
         <button onClick={() => signIn()}>log in</button>
       )}

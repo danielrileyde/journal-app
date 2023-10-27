@@ -28,7 +28,7 @@ export const Form = ({ onSubmit }: FormProps) => {
       body: JSON.stringify(newEntry),
     });
     // Step 2; Store the information in the localStorage
-    setEntries([...entries, newEntry]);
+    // setEntries([...entries, newEntry]);
   };
   return (
     <>

@@ -1,12 +1,14 @@
 import { Entry } from "../page";
 import "../styles/List.css";
 import { ListItem } from "./ListItem";
+import useSWR from "swr";
 
 interface ListProps {
   items: Entry[];
 }
 
 export const List = ({ items }: ListProps) => {
+  console.log("Items: ", items);
   return (
     <ul className="List">
       {items.map((item) => {

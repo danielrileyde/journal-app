@@ -1,17 +1,10 @@
 import { FormEvent } from "react";
-// import { uid } from "uid";
-import useLocalStorageState from "use-local-storage-state";
-import useSWR from "swr";
-import { Entry } from "../page";
 
 interface FormProps {
   onSubmit: () => void;
 }
 
 export const Form = ({ onSubmit }: FormProps) => {
-  const [entries, setEntries] = useLocalStorageState<Entry[]>("entries", {
-    defaultValue: [],
-  });
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Step 1; Capture user inputs
@@ -27,8 +20,6 @@ export const Form = ({ onSubmit }: FormProps) => {
       },
       body: JSON.stringify(newEntry),
     });
-    // Step 2; Store the information in the localStorage
-    // setEntries([...entries, newEntry]);
   };
   return (
     <>

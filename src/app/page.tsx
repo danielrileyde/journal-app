@@ -1,5 +1,4 @@
 "use client";
-// import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
 import { List } from "./components/List";
 import { Modal } from "./components/Modal";
@@ -19,9 +18,6 @@ export type Entry = {
 export default function Home({ session }: { session: Session }) {
   const { status } = useSession();
   console.log("Session: ", session);
-  // const [entries] = useLocalStorageState("entries", {
-  //   defaultValue: [],
-  // });
 
   const { data } = useSWR("/api/home");
   console.log("data", data);

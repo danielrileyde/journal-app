@@ -1,7 +1,6 @@
 import { Entry } from "../page";
 import "../styles/List.css";
 import { ListItem } from "./ListItem";
-import useSWR from "swr";
 
 interface ListProps {
   items: Entry[];

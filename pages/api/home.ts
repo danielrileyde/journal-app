@@ -3,14 +3,16 @@ import JournalEntry from "../../lib/models/JournalEntry";
 import User from "../../lib/models/User";
 
 export default async function handler(req, res) {
-  try {
-    await dbConnect();
-    if (req.method === "GET") {
-      const entries = await JournalEntry.find();
-      return res.status(200).json(entries);
-    }
-    if (req.method === "POST") {
-      console.log("req.body", req.body);
+  console.log(req.method);
+  await dbConnect();
+  if (req.method === "GET") {
+    const entries = await JournalEntry.find();
+    // console.log("entiries: ", entries);
+    res.status(200).json(entries);
+  }
+  if (req.method === "POST") {
+    console.log("req.body", req.body);
+    try {
       const createdEntry = await JournalEntry.create(req.body);
       await User.findByIdAndUpdate(
         createdEntry.id,
@@ -19,8 +21,10 @@ export default async function handler(req, res) {
         },
         { new: true }
       );
+
+      return res.status(201).json({ message: "Entry created" });
+    } catch (error) {
+      console.log("error is", error);
     }
-  } catch (error) {
-    console.log(error);
   }
 }

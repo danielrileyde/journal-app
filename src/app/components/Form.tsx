@@ -5,8 +5,7 @@ interface FormProps {
   onSubmit: () => void;
 }
 
-export const Form = ({ onSubmit }: FormProps) => {
-  const { mutate } = useSWR("/api/home");
+export const Form = ({ onSubmit, mutate }: FormProps) => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Step 1; Capture user inputs
@@ -23,6 +22,7 @@ export const Form = ({ onSubmit }: FormProps) => {
       },
       body: JSON.stringify(newEntry),
     });
+    console.log("Response: ", response);
     if (response.ok) {
       mutate();
     }

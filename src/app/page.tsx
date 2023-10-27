@@ -17,8 +17,7 @@ export type Entry = {
 export default function Home() {
   const { status } = useSession();
 
-  const { data } = useSWR("/api/home");
-
+  const { data, mutate } = useSWR("/api/home");
   const isLoggedIn = status === "authenticated";
 
   const [showForm, setShowForm] = useState(false);
@@ -62,7 +61,7 @@ export default function Home() {
 
       {showForm && (
         <Modal onClose={() => setShowForm(false)}>
-          <Form onSubmit={() => setShowForm(false)} />
+          <Form onSubmit={() => setShowForm(false)} mutate={mutate} />
         </Modal>
       )}
     </div>

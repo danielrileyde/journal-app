@@ -7,7 +7,6 @@ interface ListProps {
 }
 
 export const List = ({ items }: ListProps) => {
-  console.log("Items: ", items);
   return (
     <ul className="List">
       {items.map((item) => {

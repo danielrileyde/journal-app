@@ -17,10 +17,9 @@ export type Entry = {
 
 export default function Home({ session }: { session: Session }) {
   const { status } = useSession();
-  console.log("Session: ", session);
+  // console.log("Session: ", session);
 
   const { data } = useSWR("/api/home");
-  console.log("data", data);
 
   const isLoggedIn = status === "authenticated";
 
@@ -60,7 +59,7 @@ export default function Home({ session }: { session: Session }) {
       {isLoggedIn ? (
         <List items={data} />
       ) : (
-        <button onClick={() => signIn()}>log in</button>
+        <button onClick={() => signIn()}>Sign up/in</button>
       )}
 
       {showForm && (

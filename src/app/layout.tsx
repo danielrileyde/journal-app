@@ -1,6 +1,7 @@
 "use client";
 import { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
+// import { page } from "next/dist/build/templates/app-page";
 import { SWRConfig } from "swr";
 
 export default function RootLayout({

@@ -4,7 +4,7 @@ const { Schema, models, model } = mongoose;
 const journalEntrySchema = new Schema({
   title: { type: String, required: true },
   content: { type: String, required: true },
-  create_at: { type: Date, default: Date.now },
+  date: { type: Date, default: Date.now },
 });
 
 const JournalEntry =

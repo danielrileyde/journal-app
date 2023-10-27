@@ -3,6 +3,7 @@ import useSWR from "swr";
 
 interface FormProps {
   onSubmit: () => void;
+  mutate: () => void;
 }
 
 //@ts-ignore

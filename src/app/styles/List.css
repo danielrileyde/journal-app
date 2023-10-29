@@ -14,7 +14,7 @@
 
 .List__item--heading {
   display: flex;
-  gap: 5vw;
+  gap: 10vw;
   align-items: baseline;
   padding-bottom: 15px;
 }

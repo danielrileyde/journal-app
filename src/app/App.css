@@ -51,12 +51,16 @@ button {
   margin: 0 0 0 20px;
 }
 
-.header__butoons--add {
+.header__buttons--contrast {
+  color: var(--black);
+}
+
+.header__buttons--add {
   background-color: rgb(60, 60, 255);
   color: #fff;
 }
 
-.header__butoons--signOut {
+.header__buttons--signOut {
   background-color: #fecb02;
   color: #000;
 }

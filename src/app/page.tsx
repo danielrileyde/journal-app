@@ -29,6 +29,7 @@ export default function Home() {
         <h1>jrnl.</h1>
         <div className="header__buttons">
           <button
+            className="header__buttons--contrast"
             onClick={() => {
               document.documentElement.classList.toggle("m-dark");
             }}
@@ -36,7 +37,7 @@ export default function Home() {
             Dark Theme
           </button>
           <button
-            className="header__butoons--add"
+            className="header__buttons--add"
             onClick={() => {
               setShowForm(!showForm);
             }}
@@ -44,7 +45,7 @@ export default function Home() {
             Add Entry
           </button>
           <button
-            className="header__butoons--signOut"
+            className="header__buttons--signOut"
             onClick={() => {
               signOut();
             }}

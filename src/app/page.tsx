@@ -27,35 +27,37 @@ export default function Home() {
     <div className="app">
       <header>
         <h1>jrnl.</h1>
-        <div className="header__buttons">
-          <button
-            className="header__buttons--contrast"
-            onClick={() => {
-              document.documentElement.classList.toggle("m-dark");
-            }}
-          >
-            Contrast
-          </button>
-          <button
-            className="header__buttons--add"
-            onClick={() => {
-              setShowForm(!showForm);
-            }}
-          >
-            Add Entry
-          </button>
-          <button
-            className="header__buttons--signOut"
-            onClick={() => {
-              signOut();
-            }}
-          >
-            Sign Out
-          </button>
-        </div>
       </header>
       {isLoggedIn ? (
-        <List items={data} />
+        <>
+          <div className="header__buttons">
+            <button
+              className="header__buttons--contrast"
+              onClick={() => {
+                document.documentElement.classList.toggle("m-dark");
+              }}
+            >
+              Contrast
+            </button>
+            <button
+              className="header__buttons--add"
+              onClick={() => {
+                setShowForm(!showForm);
+              }}
+            >
+              Add Entry
+            </button>
+            <button
+              className="header__buttons--signOut"
+              onClick={() => {
+                signOut();
+              }}
+            >
+              Sign Out
+            </button>
+          </div>
+          <List items={data} />
+        </>
       ) : (
         <button onClick={() => signIn()}>Sign up/in</button>
       )}

@@ -34,18 +34,18 @@ export const Form = ({ onSubmit, mutate }: FormProps) => {
   return (
     <>
       <form onSubmit={(event) => handleSubmit(event)}>
-        <h3 className="form__heading">Create a jrnl entry</h3>
-        <label htmlFor="form__title">Title</label>
-        <input required name="form__title" id="form__title"></input>
-        <label htmlFor="form__content">Content</label>
+        <h3>Create a jrnl entry</h3>
+        <label htmlFor="title">Title</label>
+        <input required name="title" id="title"></input>
+        <label htmlFor="content">Content</label>
         <textarea
           required
-          id="form__content"
+          id="content"
           rows={15}
           cols={70}
           maxLength={2500}
         ></textarea>
-        <button className="form__submit--button">Create Entry</button>
+        <button className="submit__button">Create Entry</button>
       </form>
     </>
   );

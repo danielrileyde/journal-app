@@ -60,7 +60,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <header>
+          <header className="loggedOut--header">
             <h1>Welcome to jrnl.</h1>
           </header>
           <h3 className="app__homepage--h3">

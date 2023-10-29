@@ -13,9 +13,11 @@ export const ListItem = ({ item }: ListItemProps) => {
       key={item.id}
       onClick={() => setExpand(!expand)}
     >
-      <h4>{item.title}</h4>
-      <p>{new Date(item.date).toDateString()}</p>
-      <p>{item.content}</p>
+      <div className="List__item--heading">
+        <p className="List__item--date">{new Date(item.date).toDateString()}</p>
+        <h4 className="List__item--title">{item.title}</h4>
+      </div>
+      <p className="List__item--content">{item.content}</p>
     </li>
   );
 };

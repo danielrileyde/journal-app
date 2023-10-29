@@ -25,9 +25,6 @@ export default function Home() {
 
   return (
     <div className="app">
-      <header>
-        <h1>Welcome to jrnl...</h1>
-      </header>
       {isLoggedIn ? (
         <>
           <header>
@@ -63,7 +60,12 @@ export default function Home() {
         </>
       ) : (
         <>
-          <h3>Your minimalistic journal application.</h3>
+          <header>
+            <h1>Welcome to jrnl.</h1>
+          </header>
+          <h3 className="app__homepage--h3">
+            Your minimalistic journal application.
+          </h3>
           <button className="button__signInUp" onClick={() => signIn()}>
             Sign up/in
           </button>

@@ -20,6 +20,8 @@
   min-width: 100vw;
   min-height: 100vh;
   background: var(--white);
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -64,6 +66,13 @@ button {
 .header__buttons--signOut {
   background-color: #fecb02;
   color: #000;
+}
+
+.button__signInUp {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 150px;
 }
 
 form {

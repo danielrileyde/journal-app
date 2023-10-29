@@ -15,7 +15,7 @@ export const ListItem = ({ item }: ListItemProps) => {
     >
       <div className="List__item--heading">
         <p className="List__item--date">{new Date(item.date).toDateString()}</p>
-        <h4 className="List__item--title">{item.title}</h4>
+        <p className="List__item--title">{item.title}</p>
       </div>
       <p className="List__item--content">{item.content}</p>
     </li>

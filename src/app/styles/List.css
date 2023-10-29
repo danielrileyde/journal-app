@@ -4,7 +4,7 @@
 }
 
 .List__item {
-  border-bottom: solid 1px;
+  border-bottom: solid 2px;
   margin: 10px 0 0;
   height: 2em;
   overflow: hidden;
@@ -20,12 +20,13 @@
 }
 
 .List__item--date {
-  font-weight: 200;
-  font-size: 1.3em;
+  font-weight: 300;
+  font-size: 1.1em;
 }
 
 .List__item--title {
-  font-size: 1.3rem;
+  font-size: 1.4rem font-weight 400;
+  color: red;
 }
 
 .List__item.m-expand {

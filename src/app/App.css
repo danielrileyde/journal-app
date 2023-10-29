@@ -106,12 +106,12 @@ form {
   font-weight: 500;
 }
 
-.form__title {
+.title {
   padding: 0 0 5px;
   font-weight: 300;
 }
 
-.form__content {
+.content {
   padding: 15px 0 5px;
   font-weight: 300;
 }

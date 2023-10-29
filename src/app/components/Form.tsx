@@ -45,7 +45,7 @@ export const Form = ({ onSubmit, mutate }: FormProps) => {
           cols={70}
           maxLength={2500}
         ></textarea>
-        <button className="submit__button">Create Entry</button>
+        <button className="form__submit--button">Create Entry</button>
       </form>
     </>
   );

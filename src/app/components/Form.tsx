@@ -33,8 +33,8 @@ export const Form = ({ onSubmit, mutate }: FormProps) => {
   };
   return (
     <>
-      <form className="form__heading" onSubmit={(event) => handleSubmit(event)}>
-        <h3>Create a jrnl entry</h3>
+      <form className="form" onSubmit={(event) => handleSubmit(event)}>
+        <h3 className="form__heading">Create a jrnl entry</h3>
         <label htmlFor="title">Title</label>
         <input required name="title" id="title"></input>
         <label htmlFor="content">Content</label>

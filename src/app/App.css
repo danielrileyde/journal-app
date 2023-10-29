@@ -52,7 +52,8 @@ button {
 }
 
 .header__buttons--contrast {
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .header__buttons--add {

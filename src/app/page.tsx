@@ -34,7 +34,7 @@ export default function Home() {
               document.documentElement.classList.toggle("m-dark");
             }}
           >
-            Dark Theme
+            Contrast
           </button>
           <button
             className="header__buttons--add"

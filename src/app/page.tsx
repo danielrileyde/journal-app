@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import "./App.css";
 import { List } from "./components/List";
@@ -16,6 +17,8 @@ export type Entry = {
 
 export default function Home() {
   const { status } = useSession();
+  const { data: session } = useSession();
+  const userName = session?.user?.name;
 
   const { data, mutate } = useSWR("/api/home");
   const isLoggedIn = status === "authenticated";
@@ -28,7 +31,7 @@ export default function Home() {
       {isLoggedIn ? (
         <>
           <header>
-            <h1>jrnl.</h1>
+            <h1>{userName}'s jrnl.</h1>
             <div className="header__buttons">
               <button
                 className="header__buttons--contrast"
@@ -63,8 +66,12 @@ export default function Home() {
           <header className="loggedOut--header">
             <h1>Welcome to jrnl.</h1>
           </header>
-          <p className="app__homepage--p">
+          <p className="app__homepage--p--header">
             Your minimalistic journal application.
+          </p>
+          <p className="app__homepage--p--body">
+            *not suitable for perfectionists. Remember, you cannot edit or
+            delete.
           </p>
           <button className="button__signInUp" onClick={() => signIn()}>
             Sign up/in

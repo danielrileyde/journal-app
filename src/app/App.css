@@ -53,9 +53,9 @@ button {
   flex-direction: column;
   gap: 10px;
 }
-.header__buttons button:nth-of-type(2) {
+/* .header__buttons button:nth-of-type(2) {
   margin: 0 0 0 20px;
-}
+} */
 
 .header__buttons--contrast {
   background-color: var(--black);
@@ -76,7 +76,7 @@ button {
   display: flex;
   justify-content: center;
   align-self: center;
-  margin-top: 50px;
+  margin-top: 40px;
   background-color: var(--black);
   color: var(--white);
   font-size: 1rem;
@@ -87,13 +87,23 @@ button {
   box-shadow: 0 15px 20px #919191;
 }
 
-.app__homepage--p {
+.app__homepage--p--header {
   display: flex;
   justify-content: center;
   align-self: center;
   margin-top: 50px;
   font-size: 2.5rem;
   font-weight: 200;
+}
+
+.app__homepage--p--body {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: red;
 }
 
 form {
@@ -143,7 +153,9 @@ form {
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: rgb(240, 240, 240);
+  /* background-color: rgb(240, 240, 240); */
+  background-color: rgb(196, 196, 196);
+  color: var(--black);
   border: solid 0.5px;
   border-radius: 30px;
 }

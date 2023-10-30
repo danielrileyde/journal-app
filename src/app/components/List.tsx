@@ -7,9 +7,16 @@ interface ListProps {
 }
 
 export const List = ({ items }: ListProps) => {
+  console.log("Items: ", items);
+  const reversedOrder = items
+    .slice()
+    //@ts-ignore
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  console.log("reversedOrder: ", reversedOrder);
+
   return (
     <ul className="List">
-      {items.map((item) => {
+      {reversedOrder.map((item) => {
         return (
           <ListItem
             key={(item.content, item.date, item.id, item.title)}

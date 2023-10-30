@@ -84,6 +84,9 @@ export default function Home() {
           <Form onSubmit={() => setShowForm(false)} mutate={mutate} />
         </Modal>
       )}
+      <footer>
+        <p>Made with ❤️ in Berlin</p>
+      </footer>
     </div>
   );
 }

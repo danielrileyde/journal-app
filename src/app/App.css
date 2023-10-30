@@ -144,6 +144,24 @@ form {
   color: #000;
 }
 
+.character__counter {
+  display: flex;
+  align-self: end;
+  margin-top: 10px;
+  color: #000;
+  font-weight: 200;
+}
+
+#typed--characters {
+  color: #000;
+}
+#forward--slash {
+  color: #000;
+}
+#maximum--characters {
+  color: #000;
+}
+
 .title--input {
   color: #000;
 }
@@ -184,9 +202,16 @@ form {
   display: flex;
   justify-content: center;
   align-self: end;
-  margin: 10px 10px;
+  margin: 15px 20px;
   background-color: var(--white);
   color: var(--black);
   border: (--border);
   font-weight: 400;
+}
+
+footer {
+  display: flex;
+  align-self: center;
+  position: fixed;
+  bottom: 32px;
 }

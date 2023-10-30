@@ -1,0 +1,170 @@
+:root {
+  --black: #121212;
+  --white: #fff;
+  --border: 1px solid #121212;
+  --grey: #949494;
+}
+
+/* Define your root variables for mobile */
+@media (max-width: 768px) {
+  :root {
+    --black: #000; /* Adjust as needed for mobile */
+    --white: #fff;
+    --border: 1px solid #000; /* Adjust as needed for mobile */
+    --grey: #939393; /* Adjust as needed for mobile */
+  }
+}
+
+:root.m-dark {
+  --black: #fff;
+  --white: #121212;
+  --border: 1px solid #fff;
+  --grey: #939393;
+}
+
+* {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+/* Adjust background color and margins for header for mobile */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 2px;
+  margin: 0 15px; /* Adjust margin for mobile */
+}
+
+/* Adjust h1 font size for mobile */
+h1 {
+  font-size: 6vw; /* Adjust font size for mobile */
+}
+
+/* Add media query for button styles on mobile */
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px 5px;
+}
+
+.header__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Adjust button margin for mobile */
+.header__buttons button:nth-of-type(2) {
+  margin: 0 0 0 20px;
+}
+
+/* Add media query for button styles on mobile */
+.header__buttons--contrast,
+.header__buttons--add,
+.header__buttons--signOut {
+  background-color: var(--black);
+  color: var(--white);
+  border: none; /* Remove border for mobile */
+}
+
+/* Adjust button positions for mobile */
+.header__buttons--add {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+.button__signInUp {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 20px; /* Adjust margin for mobile */
+  font-size: 1rem;
+  font-weight: 400;
+  width: 40%; /* Adjust width for mobile */
+  padding: 10px 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px #919191; /* Adjust box-shadow for mobile */
+}
+
+/* Add media query for homepage text */
+.app__homepage--p--header,
+.app__homepage--p--body {
+  text-align: center; /* Center text for mobile */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Add media query for form heading on mobile */
+.form__heading {
+  font-size: 1.2em; /* Adjust font size for mobile */
+  padding: 0 0 10px; /* Adjust padding for mobile */
+}
+
+/* Add media query for form input styles on mobile */
+.title,
+.content,
+.textArea,
+.character__counter,
+#typed--characters,
+#forward--slash,
+#maximum--characters,
+.title--input {
+  color: var(--black); /* Adjust text color for mobile */
+}
+
+/* Add media query for submit button on mobile */
+.form__submit--button {
+  width: 50%; /* Adjust width for mobile */
+  margin-top: 20px; /* Adjust margin for mobile */
+}
+
+/* Add media query for modal styles on mobile */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(2px);
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Add media query for inner modal styles on mobile */
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: rgb(196, 196, 196);
+  border: solid 0.5px;
+  border-radius: 30px;
+}
+
+/* Adjust cancel button styles for mobile */
+.model__inner--cancelButton {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  margin: 15px 20px;
+  background-color: var(--white);
+  color: var(--black);
+  border: var(--border); /* Use the custom border variable */
+  font-weight: 400;
+}
+
+footer {
+  display: flex;
+  align-self: center;
+  position: fixed;
+  bottom: 32px;
+}

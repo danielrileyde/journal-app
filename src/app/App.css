@@ -2,14 +2,14 @@
   --black: #121212;
   --white: #fff;
   --border: 1px solid #121212;
-  --grey: #888;
+  --grey: #949494;
 }
 
 :root.m-dark {
   --black: #fff;
   --white: #121212;
   --border: 1px solid #fff;
-  --grey: #c8c8c8;
+  --grey: #939393;
 }
 
 * {
@@ -111,7 +111,7 @@ button {
   margin-top: 30px;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--grey);
+  color: #939393;
 }
 
 form {
@@ -144,6 +144,8 @@ form {
   display: flex;
   justify-content: center;
   align-self: center;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .modal {

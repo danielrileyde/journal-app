@@ -118,22 +118,34 @@ form {
   display: flex;
   flex-direction: column;
   padding: 10px 50px 40px;
+  color: #000;
 }
 
 .form__heading {
   padding: 0 0 20px;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 400;
+  color: #000;
 }
 
 .title {
   padding: 0 0 5px;
   font-weight: 300;
+  color: #000;
 }
 
 .content {
   padding: 15px 0 5px;
   font-weight: 300;
+  color: #000;
+}
+
+.textArea {
+  color: #000;
+}
+
+.title--input {
+  color: #000;
 }
 
 .form__submit--button {
@@ -163,9 +175,7 @@ form {
   display: flex;
   flex-direction: column;
   margin: auto;
-  /* background-color: rgb(240, 240, 240); */
   background-color: rgb(196, 196, 196);
-  color: var(--black);
   border: solid 0.5px;
   border-radius: 30px;
 }
@@ -175,7 +185,8 @@ form {
   justify-content: center;
   align-self: end;
   margin: 10px 10px;
-  background-color: red;
-  color: white;
+  background-color: var(--white);
+  color: var(--black);
+  border: (--border);
   font-weight: 400;
 }

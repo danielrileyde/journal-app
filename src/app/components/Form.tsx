@@ -35,10 +35,20 @@ export const Form = ({ onSubmit, mutate }: FormProps) => {
     <>
       <form className="form" onSubmit={(event) => handleSubmit(event)}>
         <h3 className="form__heading">Create a jrnl entry</h3>
-        <label htmlFor="title">Title</label>
-        <input required name="title" id="title"></input>
-        <label htmlFor="content">Content</label>
+        <label className="title" htmlFor="title">
+          Title
+        </label>
+        <input
+          required
+          className="title--input"
+          name="title"
+          id="title"
+        ></input>
+        <label className="content" htmlFor="content">
+          Content
+        </label>
         <textarea
+          className="textArea"
           required
           id="content"
           rows={15}

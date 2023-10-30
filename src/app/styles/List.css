@@ -27,7 +27,7 @@
 .List__item--title {
   font-size: 2rem;
   font-weight: 300;
-  color: red;
+  color: var(--grey);
 }
 
 .List__item.m-expand {

@@ -30,6 +30,14 @@ export default function Home() {
     <div className="app">
       {isLoggedIn ? (
         <>
+          <button
+            className="header__buttons--add"
+            onClick={() => {
+              setShowForm(!showForm);
+            }}
+          >
+            Add Entry
+          </button>
           <header>
             <h1>{userName}'s jrnl.</h1>
             <div className="header__buttons">
@@ -40,14 +48,6 @@ export default function Home() {
                 }}
               >
                 Contrast
-              </button>
-              <button
-                className="header__buttons--add"
-                onClick={() => {
-                  setShowForm(!showForm);
-                }}
-              >
-                Add Entry
               </button>
               <button
                 className="header__buttons--signOut"

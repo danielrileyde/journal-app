@@ -1,11 +1,15 @@
 :root {
   --black: #121212;
   --white: #fff;
+  --border: 1px solid #121212;
+  --grey: #888;
 }
 
 :root.m-dark {
   --black: #fff;
   --white: #121212;
+  --border: 1px solid #fff;
+  --grey: #c8c8c8;
 }
 
 * {
@@ -63,13 +67,17 @@ button {
 }
 
 .header__buttons--add {
-  background-color: rgb(60, 60, 255);
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
 }
 
 .header__buttons--signOut {
-  background-color: #fecb02;
-  color: #000;
+  background-color: var(--white);
+  color: var(--black);
+  border: var(--border);
 }
 
 .button__signInUp {
@@ -103,7 +111,7 @@ button {
   margin-top: 30px;
   font-size: 1.2rem;
   font-weight: 300;
-  color: red;
+  color: var(--grey);
 }
 
 form {

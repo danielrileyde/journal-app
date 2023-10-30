@@ -1,6 +1,7 @@
 .List {
   list-style: none;
   padding: 10px 30px;
+  min-height: 84vh;
 }
 
 .List__item {
@@ -31,5 +32,5 @@
 }
 
 .List__item.m-expand {
-  height: 150px;
+  height: 200px;
 }

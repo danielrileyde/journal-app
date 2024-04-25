@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JRNL
 
-## Getting Started
+JRNL is a minimalist journal/diary application designed to encourage direct and accurate writing. Built with Next.js, React, and TypeScript, JRNL follows a simple Swiss design approach, primarily using white and black colors with a dark mode option for improved readability. Typography is carefully chosen to emphasize hierarchy and enhance user experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Minimalist Design:** JRNL adopts a minimalist design philosophy to eliminate distractions and focus on writing.
+- **Dark Mode:** Switch between white/black and black/white color schemes for improved readability in different lighting conditions.
+- **Direct Writing:** Users can post new entries with a minimum of 10 characters and a maximum of 2500 characters, promoting clear and concise expression.
+- **User Authentication:** Log in with GitHub and future support for signing up with email or Google accounts.
+- **Anonymous Posting:** Planned feature to allow users to post journal entries anonymously to a platform.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/jrnl.git
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    Install dependencies:
 
-## Learn More
+    bash
 
-To learn more about Next.js, take a look at the following resources:
+cd jrnl
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+bash
 
-## Deploy on Vercel
+    npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Access JRNL in your browser at:
+        Localhost: http://localhost:3000
+        Production: https://journal-app-chi-ashy.vercel.app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Future Enhancements
+
+    Support for signing up with email or Google accounts.
+    Integration with additional authentication providers.
+    Ability to post journal entries anonymously to a platform.
+    Search functionality to easily find past entries.
+    Export feature to save journal entries locally or in various formats.
+    Integration with cloud storage services for backup and sync capabilities.
+
+Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request with your ideas, bug fixes, or enhancements.
+License
+
+This project is licensed under the MIT License.
